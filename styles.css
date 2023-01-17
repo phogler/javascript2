@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+body {
+    font-family: Rubik;
+    height: 100dvh;
+}
+
+main {
+    padding: 10px;
+    display: flex;
+    gap: 1rem;
+}
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    gap: 1rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+label {
+    display: block;
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+}
+
+input {
+    width: 100%;
+    padding: 6px 0;
+    text-indent: 5px;
+}
+
+button {
+    cursor: pointer;
+    padding: 6px 8px;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 1.6rem;
+}
+
+.limit-form {
+    margin: 1rem 0 0 0;
+}
+
+.todo-warning {
+    display: none;
+    margin-top: 1rem;
+    color: red;
+    font-weight: semibold;
+}
+
+.todo-warning.show {
+    display: block;
+}
+
+.todos-list {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(0, 300px));
+    gap: 2rem;
+}
+
+.todo-item {
+    border: 1px solid lightblue;
+    padding: 1rem;
+    transition: 0.1s ease;
+}
+
+.todo-item.status-completed {
+    border: 1px solid green;
+}
+
+.todo-item.status-incomplete {
+    border: 1px solid red;
+}
+
+.todo-item p.status-completed {
+    color: green;
+}
+
+.todo-item p.status-incomplete {
+    color: red;
+}

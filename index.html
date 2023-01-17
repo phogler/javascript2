@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <nav>
+            <a href="/">Todo App</a>
+        </nav>
+        <main>
+            <div>
+                <form class="todo-form">
+                    <div>
+                        <label> Todo </label>
+                        <input type="text" name="todo" placeholder="Walk the dog" class="input-todo" />
+                        <small class="todo-warning">Todo cannot be empty!</small>
+                    </div>
+                    <button class="todo-submit" type="submit">Submit New Todo</button>
+                </form>
+
+                <form class="limit-form">
+                    <label> Limit </label>
+                    <input
+                        type="number"
+                        name="limit"
+                        value="5"
+                        placeholder="5"
+                        class="input-limit"
+                        min="5"
+                        max="99"
+                    />
+                    <button type="submit">Limit the search</button>
+                </form>
+            </div>
+
+            <dialog class="dialog-warning" close>
+                <h1>
+                    Todo <span class="dialog-todo-id">5</span> cannot be deleted when status is FALSE (not
+                    done), please set the status to true (DONE) in order to delete
+                </h1>
+                <button class="dialog-close">Close dialog</button>
+            </dialog>
+
+            <ul class="todos-list"></ul>
+        </main>
+        <script type="module" src="index.js"></script>
+    </body>
+</html>
